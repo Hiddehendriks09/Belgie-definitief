@@ -98,7 +98,7 @@ if st.button("Process Files"):
             # Create ZIP including both PDFs and CSV
             if pdfs or csv:
                 zip_buffer = create_zip(pdfs, csv, csv_name)
-                st.download_button("Download alle bestanden als ZIP", zip_buffer, "all_files.zip", "application/zip")
+                st.download_button("Download alle bestanden als ZIP", zip_buffer, "belgie.zip", "application/zip")
             
             if errors:
                 st.error("The following invoices were not found in the PDF: " + ", ".join(str(inv) for inv in errors))
